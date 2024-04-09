@@ -9,11 +9,11 @@ Follow these steps to set up and run the Habibi AI project:
 ### Clone Repositories
 1. Clone the frontend repository:
    ```
-   git clone "url of frontend"
+   git clone "https://github.com/chnrv99/Habibi-AI-Frontend"
    ```
 2. Clone the backend repository:
    ```
-   git clone "url of backend"
+   git clone "https://github.com/chnrv99/Habibi-AI-Backend"
    ```
 
 ### Install Dependencies
