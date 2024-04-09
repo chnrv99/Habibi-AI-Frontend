@@ -28,9 +28,31 @@ function Login() {
         return (
             // create a basic login page, where there is a link for google
             // oauth
-            
 
-            <Link onClick={handleGoogleOauth} className='text-3xl font-semibold underline'>Google Login</Link>
+            // make a basic landing page, title as Habibi AI, and some description, black background(tailwind), then finally at the bottom, display the google login link
+            // with google
+            <>
+                <div className=" bg-slate-800 text-white h-[100vh]">
+                    <div className="container">
+                        <h1 className='text-4xl font-semibold p-2 text-slate-400'>Habibi AI</h1>
+                        <p className='text-xl font-semibold text-center'>A chatbot that helps you with your daily tasks</p>
+                        <p className='text-xl font-semibold text-center'>Login with Google to get started</p>
+                        <br />
+                        <br />
+
+                    </div>
+
+
+                    {/* create a login google button tailwind */}
+                    <div className="flex justify-center">
+                        <button onClick={handleGoogleOauth} className='bg-blue-500 text-white p-2 rounded-md'>Login with Google</button>
+                    </div>
+
+
+                    <Link onClick={handleGoogleOauth} className='text-3xl font-semibold underline'>Google Login</Link>
+                </div>
+            </>
+
         )
 
     }
