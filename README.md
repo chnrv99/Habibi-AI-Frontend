@@ -1,41 +1,64 @@
-# Habibi AI
+# Habibi AI - Getting Started Guide
 
 Habibi AI is a friendly AI imbued with a sense of humor, designed to interact with users in an entertaining and engaging manner.
 
-## API Routes
+## Running the Project
 
-### `/chat` 
-- **Method**: POST
-- **Description**: Endpoint for sending and receiving generative AI responses.
-- **Security**: Protected
+Follow these steps to set up and run the Habibi AI project:
 
-### `/google` 
-- **Method**: GET
-- **Description**: Google OAuth endpoint for authentication.
+### Clone Repositories
+1. Clone the frontend repository:
+   ```
+   git clone "url of frontend"
+   ```
+2. Clone the backend repository:
+   ```
+   git clone "url of backend"
+   ```
 
-### `/redirect` 
-- **Method**: GET
-- **Description**: Redirect URL for initiating Google OAuth process.
+### Install Dependencies
+1. Open a terminal and navigate to the frontend directory:
+   ```
+   cd frontend
+   ```
+2. Install npm packages:
+   ```
+   npm install
+   ```
+3. Open another terminal and navigate to the backend directory:
+   ```
+   cd backend
+   ```
+4. Install npm packages:
+   ```
+   npm install
+   ```
 
-### `/users` 
-- **Method**: POST
-- **Description**: Endpoint to add a new user to the system.
+### Start Backend Server
+1. In the backend terminal, start the server on the default port 3000:
+   ```
+   npm run start:dev
+   ```
 
-### `/users/:email` 
-- **Method**: GET
-- **Description**: Endpoint to retrieve user information based on email.
+### Start Frontend Server
+1. In the frontend terminal, start the server on the default port 3001:
+   ```
+   npm start
+   ```
 
-## Data Storage
+### Configure Environment Variables
+1. Create a `.env` file in the backend directory.
+2. Add the following environment variables to the `.env` file and fill in the respective values:
+   ```
+   GOOGLE_CLIENT_ID=
+   GOOGLE_CLIENT_SECRET=
+   GOOGLE_CALLBACK_URL=http://localhost:3000/redirect
+   JWT_SECRET=
+   MONGO_URI=
+   GOOGLE_API_KEY=
+   ```
 
-Habibi AI utilizes MongoDB to store user data. The schema for user data is as follows:
-
-- **firstname**: string
-- **lastname**: string
-- **email**: string
-- **picture**: string (URL for Google profile picture)
-
-## Getting Started
-
-To start using Habibi AI, follow the API routes and integrate with the provided endpoints. Ensure to handle authentication securely, especially for the protected `/chat` endpoint. Use the MongoDB schema to store and retrieve user data efficiently.
+### Login and Chat
+Once everything is set up and running, you can navigate to the frontend application in your browser. You should be able to login using Google OAuth and start chatting with the Habibi AI bot.
 
 Enjoy interacting with Habibi AI, your friendly and funny AI companion!
