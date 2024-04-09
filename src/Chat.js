@@ -48,16 +48,16 @@ function Chat() {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center'>
-      <div className='flex flex-col items-center justify-center w-1/2'>
+    <div className='flex flex-col bg-slate-800 text-white h-[100vh] p-10'>
+      <div className='flex flex-col w-1/2'>
         {/* display user email, firstname, lastname */}
-        <h1 className='text-2xl font-semibold'>User Info</h1>
-        <h1 className='text-xl font-semibold'>Email: {user.email}</h1>
-        <h1 className='text-xl font-semibold'>First Name: {user.firstName}</h1>
-        <h1 className='text-xl font-semibold'>Last Name: {user.lastName}</h1>
+        <h1 className='text-2xl font-semibold text-slate-400 p-2'>User Info</h1>
+        <h1 className='text-xl font-semibold mt-2'>Email: {user.email}</h1>
+        <h1 className='text-xl font-semibold mt-2'>First Name: {user.firstName}</h1>
+        <h1 className='text-xl font-semibold mt-2'>Last Name: {user.lastName}</h1>
 
-        <h1 className='text-2xl font-semibold'>Chat</h1>
-        <input type='text' placeholder='Type your message here' onChange={(e) => setMessage(e.target.value)} className='w-full p-2 border border-gray-300 rounded-md mb-2' />
+        <h1 className='text-2xl font-semibold text-slate-400 p-2'>Chat</h1>
+        <input type='text' placeholder='Type your message here' onChange={(e) => setMessage(e.target.value)} className='w-full p-2 border border-gray-300 rounded-md mb-2 mt-2 text-slate-800' />
         <button onClick={handleSendMessage} className='bg-blue-500 text-white p-2 rounded-md'>Send</button>
         {/* display messages */}
 
@@ -67,7 +67,7 @@ function Chat() {
 
           {
             [...messages, ...userMessages].map((msg, index) => (
-              <div key={index} className={index % 2 === 0 ? 'bg-gray-200 p-2 rounded-md w-full mb-2' : 'bg-blue-200 p-2 rounded-md w-full mb-2'}>
+              <div key={index} className={index % 2 === 0 ? 'bg-gray-200 p-2 rounded-md w-full mb-2 text-black' : 'bg-blue-200 p-2 rounded-md w-full mb-2 text-black'}>
                 {index % 2 === 0 ? 'You: ' + msg : 'AI: ' + msg}
               </div>
             ))
